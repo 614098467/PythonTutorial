@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .nav{
+            line-height: 40px;
+            width: 100%;
+            background-color: rgb(130, 162, 192);
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        .left{
+            text-align: center;
+            width: 20%;
+            min-height: 600px;
+            overflow: auto;
+            background-color: lightgray;
+
+        }
+        .content{
+            background-color: azure;
+            width: 70%;
+            min-height: 600px;
+            
+
+        }
+        .manage{
+            text-align: center;
+            padding: 20px,0px;
+            margin: 20px;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .left,.content{
+            float: left;
+        }
+        h1{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class = 'outer'>
+    <div class = 'nav'>教育部门管理系统</div>
+    <div class = 'left'>菜单
+        <div class = 'student manage'><a href="student">学生管理</a></div>
+        <div class = 'teacher manage'><a href="teacher">老师管理</a></div>
+        <div class = 'class manage'><a href="class_">班级管理</a></div>
+    </div>
+    <div class = content>内容
+        {% block content%}
+        <h1>Welcome To Login</h1>
+        {% endblock %}
+    </div>
+</div>
+
+
+
+</body>
+</html>

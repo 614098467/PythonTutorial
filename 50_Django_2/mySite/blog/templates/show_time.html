@@ -1,0 +1,41 @@
+
+{% load myfilter %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {{ d.age|multiply_by:5 }}
+
+    {% plus 3 4 %}
+    <h1>{{t.1}}</h1>
+    <h1>{{name}}</h1>
+    <h1>{{d}}</h1>
+
+    <h1>{{test|add:12}}</h1>
+
+    {% if d.age > 20 %}
+        {{d.name}}
+        <h1>名字大于为20，显示名字标签</h1>
+    {% else%}
+        <h1>名字小于20，显示hobby标签</h1>
+    {% endif %}
+
+    {% for name in t%}
+        <h1>
+            {{forloop.counter}}:{{name}}
+        </h1>
+    {% endfor %}
+
+    <form action="">
+        <p>姓名 <input type="text" name="user" id="1"></p>
+        <p>密码 <input type="text" name="pwd" id="2"></p>
+        <p></p>
+    </form>
+
+    {{ d.age|multiply_by:5 }}
+
+</body>
+</html>
